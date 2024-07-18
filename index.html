@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient-Doctor Messaging</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-icon"><i class="fas fa-home"></i></div>
+        <div class="sidebar-icon"><i class="fas fa-calendar-alt"></i></div>
+        <div class="sidebar-icon"><i class="fas fa-envelope"></i></div>
+        <div class="sidebar-icon"><i class="fas fa-cog"></i></div>
+    </div>
+    
+    <div class="main-content">
+        <div class="header">
+            <input type="text" placeholder="Search in messages..." class="search-bar">
+            <div class="profile-section">
+                <i class="fas fa-bell"></i>
+                <img src="profile.jpg" alt="Profile" class="profile-pic">
+            </div>
+        </div>
+        
+        <div class="inbox">
+            <h2>Inbox</h2>
+            <div class="tabs">
+                <span>Direct Messages</span>
+                <span>Group Chat</span>
+                <span>Archived</span>
+            </div>
+            <div class="message-preview">
+                <img src="doctor1.jpg" alt="Doctor">
+                <div class="message-info">
+                    <p class="name">Dr. Sarah Smith</p>
+                    <p class="message">Thank you for sharing</p>
+                </div>
+                <span class="time">3:03pm</span>
+                <span class="notification">1</span>
+            </div>
+            <!-- Repeat message-preview for more messages -->
+        </div>
+        
+        <div class="chat-section">
+            <div class="chat-header">
+                <img src="doctor1.jpg" alt="Doctor" class="chat-pic">
+                <div class="chat-info">
+                    <p class="name">Dr. Sarah Smith</p>
+                    <p class="status">Online</p>
+                </div>
+                <div class="chat-actions">
+                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-video"></i>
+                </div>
+            </div>
+            <div class="messages">
+                <div class="message received">
+                    <img src="doctor1.jpg" alt="Doctor">
+                    <p class="text">Yes, I saw his post yesterday</p>
+                </div>
+                <div class="message sent">
+                    <p class="text">Yes, I saw his post yesterday</p>
+                </div>
+                <!-- Repeat for more messages -->
+            </div>
+            <div class="message-input">
+                <input type="text" placeholder="Type a message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
