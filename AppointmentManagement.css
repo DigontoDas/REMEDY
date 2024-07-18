@@ -1,0 +1,149 @@
+.row-one{
+    background-color: var(--gray_50);
+    width: 100%;
+}
+.coloumnheaderlog-1{
+    gap: 53px;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 550px){
+        gap: 26px;
+    }
+}
+
+.book_video {
+    color: var(--blue_A700_01) !important;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    align-self: stretch;
+    text-align: center;
+    height: 43px;
+    border-radius: 6px !important;
+    border: 1px solid var(--blue_A700_01) !important;
+}
+
+.book_hospital {
+    color: var(--white_A700) !important;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--blue_A700_01) !important;
+    align-self: stretch;
+    text-align: center;
+    height: 43px;
+    border-radius: 6px !important;
+    @media only screen and (max-width: 550px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.arrowleft_one {
+    height: 32px;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+    background-color: var(--white_A700) !important;
+    box-shadow: var(--shadow-xs);
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px !important;
+    border: 1px solid var(--blue_gray_50);
+}
+.class-1230_pm {
+    color: var(--blue_gray_400) !important;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 35px;
+    border-radius: 6px !important;
+    border: 1px solid var(--blue_gray_400) !important;
+}
+
+.class-100_pm {
+    color: var(--blue_gray_400) !important;
+    padding-left: var(--space-3xl);
+    padding-right: var(--space-3xl);
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    height: 35px;
+    border-radius: 6px !important;
+    border: 1px solid var(--blue_gray_400) !important;
+}
+
+.header-1 {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    display: flex;
+    background-color: var(--white_A700);
+    box-shadow: var(--shadow-xs);
+    justify-content: center;
+    align-items: center;
+    
+}
+.rowheaderlogo-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    @media only screen and (max-width: 1050px) {
+        flex-direction: column;
+    }
+}
+
+.searchoutline {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+#notificationButton {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+.bell-icon {
+    width: 24px;  /* Set the desired width */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+
+.profilepic {
+    height: 56px;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.container {
+    padding-bottom: 54px;
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 1050px) {
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="profile">
+            <i class="fas fa-bell">
+                <img src="bell.png" alt="bell-icon">
+            </i>
+            <img src="profile.png" alt="Profile">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="doctors-list">
+                <h2>282 Doctors Available in Bangladesh</h2>
+                <div class="doctor-card">
+                    <img src="doctor.jpg" alt="Dr. Jenny Wilson">
+                    <div class="doctor-info">
+                        <h3>Dr. Jenny Wilson</h3>
+                        <p>Dental Surgeon</p>
+                        <p>19 Year Experience Overall</p>
+                        <p>Dr. Jenny Wilson (Medicine Specialist), is a Doctor in Bangladesh, she has 20 years of...</p>
+                        <button class="book-video-consult">Book Hospital Appointment</button>
+                        <button class="book-hospital-visit">Book Online Appointment</button>
+                    </div>
+                </div>
+                <!-- Repeat the above doctor-card for more doctors -->
+            </div>
+
+            <div class="appointment-scheduler">
+                <h2>Pick Date and Time</h2>
+                <div class="calendar">
+                    <div class="month">
+                        <button>&lt;</button>
+                        <span>September 2022</span>
+                        <button>&gt;</button>
+                    </div>
+                    <div class="days">
+                        <!-- Render days here -->
+                        <span>18</span>
+                        <!-- Repeat for more days -->
+                    </div>
+                </div>
+                <div class="times">
+                    <button>12:30 PM</button>
+                    <button>1:00 PM</button>
+                    <button>1:30 PM</button>
+                    <button>2:00 PM</button>
+                    <button>2:30 PM</button>
+                    <button>3:00 PM</button>
+                    <button>3:30 PM</button>
+                    <button>4:00 PM</button>
+                    <button>4:30 PM</button>
+                </div>
+                <div class="location">
+                    <p>Hospital Location</p>
+                    <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
