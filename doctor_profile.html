@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" href="doctor_profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images/Remedy_logo.png" alt="Logo">
+        </div>
+        <div class="user-info">
+            <img src="Images/bell.png" alt="Notifications" class="icon">
+            <div class="availability-toggle">
+                <input type="checkbox" id="availability" name="availability">
+                <label for="availability" class="toggle-label"></label>
+            </div>
+            <img src="Images/doctor.jpg" alt="User Profile" class="profile-pic">
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <h2>Doctor Profile</h2>
+            <form id="doctor-profile-form">
+                <div class="profile-pic-container">
+                    <img id="profile-pic" src="Images/default-profile.jpg" alt="Profile Picture">
+                    <label for="profile-pic-input" class="upload-button">Change photo</label>
+                    <input type="file" id="profile-pic-input" name="profile-pic" accept="image/*">
+                </div>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="degrees">Degrees</label>
+                <input type="text" id="degrees" name="degrees" placeholder="Add multiple degrees separated by commas" required>
+                
+                <label for="hospitals">Hospitals</label>
+                <input type="text" id="hospitals" name="hospitals" placeholder="Add multiple hospitals separated by commas" required>
+                
+                <label for="fee">Doctor's Fee</label>
+                <input type="number" id="fee" name="fee" required>
+                
+                <label for="specialization">Specialization</label>
+                <input type="text" id="specialization" name="specialization" required>
+                
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+                
+                <label for="experience">Years of Experience</label>
+                <textarea id="experience" name="experience" placeholder="Write about your previous experience" required></textarea>
+                
+                <label for="license-number">License Number</label>
+                <input type="text" id="license-number" name="license-number" required>
+                
+                <button type="submit">Save Profile</button>
+            </form>
+        </div>
+    </main>
+    <script src="doctor_profile.js"></script>
+</body>
+</html>
