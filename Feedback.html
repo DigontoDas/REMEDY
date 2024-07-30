@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="Feedback.css">
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <img src="Images/Remedy_logo.png" alt="Logo" class="logo">
+            <div class="user-info">
+                <span class="username">Hello, User</span>
+                <div class="profile-pic">
+                    <img src="Images/profile.png" alt="User Profile">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Feedback Form</h2>
+            <form>
+                <div class="toggle-buttons">
+                    <label>
+                        <input type="radio" name="role" value="patient" required>
+                        <span class="patient-toggle">Patient</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="doctor" required>
+                        <span class="doctor-toggle">Doctor</span>
+                    </label>
+                </div>
+                <label for="rating">Rating</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select a rating</option>
+                    <option value="1">1 - Very Poor</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Average</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+    <script src="Feedback.js"></script>
+</body>
+</html>
