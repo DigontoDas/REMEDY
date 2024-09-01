@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Patient Profile</title>
     <link rel="stylesheet" href="profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
@@ -29,7 +31,6 @@
     </header>
     <main>
         <div class="profile-container">
-            <h2>Create Patient Profile</h2>
             <form id="profile-form">
                 <div class="profile-photo-section">
                     <img id="profile-photo-preview" src="Images/profile.jpg" alt="Profile Photo">
@@ -53,8 +54,14 @@
                 
                 <label for="city">City</label>
                 <input type="text" id="city" name="city" required>
-                
-                <button type="submit">Save</button>
+                <div class="flex justify-between">
+                    <div class="">
+                        <a class="btn bg-red-600 text-white">Delete Profile</a>
+                    </div>    
+                    <div>
+                        <a class="btn btn-success text-white">Save</a>
+                    </div>
+                </div>
             </form>
         </div>
     </main>
