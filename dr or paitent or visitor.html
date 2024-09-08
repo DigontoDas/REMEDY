@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Remidy</title>
 </head>
 <body>
-    <header class="mt-6 p-2 bg-base-300">
-        <div class="navbar  bg-base-300">  
+    <header class="mt-6 p-2 bg-blue-300">
+        <div class="navbar  ">  
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <div class="dropdown ">
+                <div tabindex="0" role="button" class="btn btn-ghost  lg:hidden">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
@@ -33,7 +35,7 @@
                   <li><a>About Us</a></li>
                   <li>
                     <a>Catagory</a>
-                    <ul class="p-2">
+                    <ul class="p-2  text-black">
                         <li><a>Blood Donar</a></li>
                         <li><a>Medicine Info</a></li>
                         <li><a>Appointment</a></li>
@@ -46,13 +48,13 @@
               <a class="btn btn-ghost text-xl h-20"><img src="images/Remedy_logo.png" alt="" class="w-20"></a>
             </div>
             <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
+              <ul class="menu menu-horizontal  text-black px-1">
                 <li><a>Home</a></li>
                 <li><a>About Us</a></li>
                 <li>
                   <details>
                     <summary>Catagory</summary>
-                    <ul class="p-2">
+                    <ul class="p-2  text-black">
                       <li><a>Blood Donar</a></li>
                       <li><a>Medicine Info</a></li>
                       <li><a>Appointment</a></li>
@@ -101,20 +103,20 @@
                         </svg>
                     </label>
               </div>
-              <div>
-                  <a class="btn">Visitor</a>
-              </div>
+
             </div>
           </div>
         </header>
         <main class="mt-40 mb-40">
             <div class="flex  mt-20 ml-52 w-2/3 flex-col border-opacity-50">
-                <div class="btn card bg-base-300 rounded-box grid h-20 place-items-center">Doctor</div>
+                <div class="btn card bg-blue-500 text-white rounded-box grid h-20 place-items-center">Doctor</div>
                 <div class="divider">OR</div>
-                <div class="btn card bg-base-300 rounded-box grid h-20 place-items-center">Paitent</div>
+                <div class="btn card bg-red-500 text-white rounded-box grid h-20 place-items-center">Paitent</div>
+                <div class="divider">OR</div>
+                <div class="btn card bg-green-500 text-white rounded-box grid h-20 place-items-center">Visitor</div>
             </div>
         </main>
-        <footer class="footer footer-center bg-base-300 p-10">
+        <footer class="footer footer-center bg-blue-300 p-10">
             <aside>
               <img src="images/Remedy_logo.png" alt="" class="w-20">
               <p class="font-bold">
