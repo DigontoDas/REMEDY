@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Details - Napa 500</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css">
+    <link rel="stylesheet" href="medicine.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-blue-500 p-4 flex justify-between items-center">
+        <div class="logo">
+            <img src="Images/logo.png" alt="Logo" class="w-24">
+        </div>
+        <nav class="flex space-x-4">
+            <a href="#" class="text-white">Home</a>
+            <a href="#" class="text-white">Chat with Doctor</a>
+            <a href="#" class="text-white">Appointments</a>
+            <a href="#" class="text-white">Medicines</a>
+        </nav>
+        <div class="search-bar flex items-center">
+            <input type="text" placeholder="Search for medicines..." class="border p-2">
+            <button class="bg-blue-500 text-white px-4 py-2">Search</button>
+        </div>
+    </header>
+
+    <main class="p-6">
+        <div class="flex flex-col md:flex-row">
+            <div class="product-image md:w-1/3">
+                <img src="Images/napa.jpg.png" alt="Napa 500" class="w-full h-auto">
+            </div>
+            <div class="product-details md:w-2/3 p-4">
+                <h1 class="text-3xl font-bold mb-4">Napa 500 Tablet (500mg)</h1>
+                <p><strong>Manufacturer:</strong> Beximco Pharmaceuticals Ltd.</p>
+                <p><strong>Generic:</strong> Paracetamol</p>
+                <p><strong>Type:</strong> Pain reliever and fever reducer</p>
+                <p class="text-green-600"><strong>Price:</strong> ৳10.80 (per strip)</p>
+                <p class="text-gray-600">Used to treat mild to moderate pain and fever. Safe for most patients under doctor's guidance.</p>
+                <button class="bg-blue-500 text-white px-4 py-2 mt-4">Add to Cart</button>
+            </div>
+        </div>
+
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold mb-4">Medicine Overview</h2>
+            <p>Napa 500 is used to relieve pain and reduce fever. Common uses include headache, body ache, toothache, and common cold. It is often prescribed by doctors for these conditions.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Uses of Napa 500</h3>
+                    <ul class="list-disc ml-6">
+                        <li>Pain relief</li>
+                        <li>Fever</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Side Effects</h3>
+                    <ul class="list-disc ml-6">
+                        <li>No common side effects</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">How to Use</h3>
+                    <p>Take 500mg medicine as advised by your doctor. Swallow it whole. Napa 500 should be taken with food.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">How it Works</h3>
+                    <p>Paracetamol in Napa 500 blocks pain signals and reduces fever by influencing the body's temperature regulation system.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold mb-4">Dosage & Administration</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Adult Dose</h3>
+                    <p>1-2 tablets every 4-6 hours. Maximum 8 tablets per day.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Child Dose</h3>
+                    <p>For children (6-12 years): 1/2 to 1 tablet 3-4 times daily.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold mb-4">Precautions</h2>
+            <p>Do not use if you are allergic to paracetamol. Consult your doctor if you have liver disease or alcohol use problems.</p>
+        </section>
+    </main>
+
+    <footer class="footer bg-blue-300 p-10 text-center">
+        <p>© 2024 Remedy Medical Consultancy. All rights reserved.</p>
+        <nav class="mt-2">
+            <a href="#" class="text-blue-600 mx-2">Facebook</a>
+            <a href="#" class="text-blue-600 mx-2">Twitter</a>
+            <a href="#" class="text-blue-600 mx-2">YouTube</a>
+        </nav>
+    </footer>
+</body>
+</html>
