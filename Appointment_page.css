@@ -143,4 +143,7 @@ header .profile .fas{
 .location p {
     margin: 5px 0;
 }
-
+.time-slot.selected {
+    background-color: #4CAF50;
+    color: white;
+}
