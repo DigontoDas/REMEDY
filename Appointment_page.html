@@ -5,24 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <title>Remedy</title>
-    <link rel="stylesheet" href="Appointment_page.css">
+    <link rel="stylesheet" href="appointment.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="Images/logo.png" alt="Logo">
+    <header class="p-2 bg-blue-500">
+    <div class="navbar  bg-blue-500 text-white">  
+        
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li><a href="./appointment.html">Appointment</a></li>
+              <li><a href="https://meet.google.com/bph-kjqf-bkf" class='font-bold'>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl h-20 mb-3"><img src="images/Remedy_logo.png" alt="" class="w-20"></a>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search">
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a href="./appointment.html">Appointment</a></li>
+            <li><a href="https://meet.google.com/bph-kjqf-bkf" class='font-bold'>Contact</a></li>
+          </ul>
         </div>
-        <div class="profile">
-            <i class="fas fa-bell">
-                <img src="Images/bell.png" alt="bell-icon">
-            </i>
-            <img src="Images/profile.png" alt="Profile">
+        <div class="navbar-end flex gap-8 ">
+            
+            <input type="text" placeholder="Search for medicines...">
+            <button>Search</button>
+            <div class="drawer drawer-end justify-end">
+                <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                <div class="drawer-content">
+                <!-- Page content here -->
+                <label for="my-drawer-4" class="">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-12 rounded-full">
+                        <img
+                            alt="Tailwind CSS Navbar component"
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                    </div>
+                </label>
+                </div>
+                <div class="drawer-side ">
+                <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+                <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 gap-4">
+                    <!-- Sidebar content here -->
+                    <li>
+                        <div class="flex justify-between">
+                            <div class="avatar">
+                                <div class="ring-primary ring-offset-base-100 w-16 rounded-full ring ring-offset-2">
+                                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="" class='font-bold' id="profile-pic">Your Profile</a></li>
+                    <li><a href="/blood" class='font-bold'>Blood Donor Registration</a></li>
+                    <li><a href="" class='font-bold'>Prescription Download</a></li>
+                    <li><a href="/feedback" class='font-bold'>Feedback</a></li>
+
+                    <ul >
+                        <li>
+                            <!-- Open the modal using ID.showModal() method -->
+                            <button class="btn bg-red-600 text-white" id="signout-button">Sign Out</button>
+                            <dialog id="signout-modal" class="modal">
+                                <div class="modal-box">
+                                    <h3 class="text-lg font-bold">Are You Sure??</h3>
+                                    <p class="py-4">Press ESC key if you don't want to sign out.</p>
+                                    <div class="flex gap-4">
+                                        <button class="btn btn-outline btn-accent" id="confirm-signout">Yes</button>
+                                        <button class="btn" id="cancel-signout">No</button>
+                                    </div>
+                                </div>
+                                <form method="dialog" class="modal-backdrop">
+                                    <button>close</button>
+                                </form>
+                            </dialog>
+                        </li>
+                    </ul>
+                </ul>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <main>
         <div class="container">
@@ -35,37 +120,26 @@
                         <p>Dental Surgeon</p>
                         <p>19 Year Experience Overall</p>
                         <p>Dr. Jenny Wilson (Medicine Specialist), is a Doctor in Bangladesh, she has 20 years of...</p>
-                        <button class="book-video-consult">Book Hospital Appointment</button>
-                        <button class="book-hospital-visit">Book Online Appointment</button>
+                        <button class="book-hospital-visit" id="book-hospital-visit" data-doctor-id="1">Book Hospital Appointment</button>
+                        <button class="book-video-consult" id="book-video-consult" data-doctor-id="1">Book Online Appointment</button>
+
                     </div>
                 </div>
-                <!-- Repeat the above doctor-card for more doctors -->
             </div>
 
             <div class="appointment-scheduler">
                 <h2>Pick Date and Time</h2>
-                <div class="calendar">
-                    <div class="month">
-                        <button>&lt;</button>
-                        <span>September 2022</span>
-                        <button>&gt;</button>
-                    </div>
-                    <div class="days">
-                        <!-- Render days here -->
-                        <span>18</span>
-                        <!-- Repeat for more days -->
-                    </div>
-                </div>
+                <input type="date" id="appointment-date" class="datepicker">
                 <div class="times">
-                    <button>12:30 PM</button>
-                    <button>1:00 PM</button>
-                    <button>1:30 PM</button>
-                    <button>2:00 PM</button>
-                    <button>2:30 PM</button>
-                    <button>3:00 PM</button>
-                    <button>3:30 PM</button>
-                    <button>4:00 PM</button>
-                    <button>4:30 PM</button>
+                    <button class="time-slot">12:30 PM</button>
+                    <button class="time-slot">1:00 PM</button>
+                    <button class="time-slot">1:30 PM</button>
+                    <button class="time-slot">2:00 PM</button>
+                    <button class="time-slot">2:30 PM</button>
+                    <button class="time-slot">3:00 PM</button>
+                    <button class="time-slot">3:30 PM</button>
+                    <button class="time-slot">4:00 PM</button>
+                    <button class="time-slot">4:30 PM</button>
                 </div>
                 <div class="location">
                     <p>Hospital Location</p>
@@ -74,54 +148,74 @@
             </div>
         </div>
     </main>
-    <footer class="footer footer-center bg-blue-300 p-10">
-        <aside>
-          <img src="images/Remedy_logo.png" alt="" class="w-20">
-          <p class="font-bold">
-            Remidy Medical Consultency
-            <br />
-            Providing reliable medical help since 2024
-          </p>
-          <p>Copyright © 2024 - All right reserved</p>
-        </aside>
-        <nav>
-          <div class="grid grid-flow-col gap-4">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                class="fill-current">
-                <path
-                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                class="fill-current">
-                <path
-                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                class="fill-current">
-                <path
-                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-              </svg>
-            </a>
-          </div>
-        </nav>
-    </footer>
+    <script>
+        let selectedDate = null;
+        let selectedTime = null;
+    
+        // Event listener for time slot buttons
+        const timeSlotButtons = document.querySelectorAll('.time-slot');
+        timeSlotButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Deselect the previously selected time slot
+                timeSlotButtons.forEach(btn => btn.classList.remove('selected'));
+    
+                // Select the new time slot
+                this.classList.add('selected');
+                selectedTime = this.textContent.trim(); // Set the selected time
+            });
+        });
+    
+        // Event listener for date picker
+        document.getElementById('appointment-date').addEventListener('change', function () {
+            selectedDate = this.value;
+        });
+    
+        document.getElementById('book-hospital-visit').addEventListener('click', function() {
+            const doctorId = this.getAttribute('data-doctor-id');
+            bookAppointment('hospital', doctorId);
+        });
+    
+        document.getElementById('book-video-consult').addEventListener('click', function() {
+            const doctorId = this.getAttribute('data-doctor-id');
+            bookAppointment('online', doctorId);
+        });
+    
+        function bookAppointment(appointmentType, doctorId) {
+            if (!selectedDate || !selectedTime) {
+                alert('Please select both a date and a time.');
+                return;
+            }
+    
+            const formattedDate = new Date(selectedDate).toISOString().split('T')[0];
+            console.log('Formatted Date:', formattedDate);
+    
+            fetch('/api/appointments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    doctorId: doctorId,
+                    appointmentType: appointmentType,
+                    date: formattedDate,
+                    time: selectedTime,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Appointment booked successfully') {
+                    alert('Your appointment has been booked.');
+                    window.location.href = '/med3';
+                } else {
+                    alert('Error booking appointment: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while booking your appointment.');
+            });
+        }  
+    </script>
+    
 </body>
 </html>
-
