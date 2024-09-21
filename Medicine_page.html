@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Remedy</title>
     <link rel="stylesheet" href="Med_page.css">
+    <link rel="stylesheet" href="med1.css">
 </head>
 <body>
   <header class="p-2 bg-red-500">
@@ -114,6 +115,10 @@
     </div>
 </header>
     <main>
+      <div class="justify-center text-center">
+        <input id="search-field" type="text" placeholder="Search for medicine...">
+        <button onclick="handleSearch()">Search</button>
+      </div>
       <div class="hero min-h-screen" style="background-image: url(Images/13-PRESCRIPTION-MEDICATIONS.jpg);">
           <div class="hero-overlay bg-opacity-50"></div>
           <div class="hero-content text-neutral-content text-center">
@@ -128,8 +133,8 @@
               <button class="btn btn-primary">Find Medicine</button>
             </div>
           </div>
-        </div>
-        <div class="products flex justify-between">
+      </div>
+      <div class="products flex justify-between">
             <div class="card bg-base-100 w-96 shadow-xl">
               <figure class="px-10 pt-10">
                 <img
@@ -144,17 +149,10 @@
                   <button href="#my_modal_8" class="btn btn-primary">Buy Now</button>
                   <a href="#my_modal_8" class="btn">Details</a>
                   <div class="modal" role="dialog" id="my_modal_8">
-                    <div class="modal-box">
+                    <div id="conainer-box" class="modal-box ">
                       <img src="Images/napa.jpg.png" alt="Shoes" class="rounded-xl" />
                       <h2 class="text-lg font-extrabold"><span class="med_name">Sargel</span></h2>
-                      <div> 
-                        <p class="py-4"><b>Power:</b><span class="med_pow"></span></p>
-                        <p class="py-4"><b>Type:</b><span class="med_type"></span></p>
-                        <p class="py-4"><b>Manufacturer:</b><span class="med_menuf"></span></p>
-                        <p class="py-4"><b>How To Use:</b><span class="med_use"></span></p>
-                        <p class="py-4"><b>Functionality:</b><span class="med_functions"></span></p>
-                        <p class="py-4"><b>Help to prevent:</b><span class="med_effectives"></span></p>
-                        <P></P>
+                      <div class="container_1"> 
                       </div>
                       
                       <div class="modal-action">
@@ -165,12 +163,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="product">
-                <img src="Images/ceevit.jpg.png" alt="Ceevit">
-                <h3>Ceevit</h3>
-                <p class="Info"></p>
-                <button>Info</button>
-            </div> -->
             <div class="card bg-base-100 w-96 shadow-xl">
               <figure class="px-10 pt-10">
                 <img
@@ -188,14 +180,7 @@
                     <div class="modal-box">
                       <img src="Images/napa.jpg.png" alt="Shoes" class="rounded-xl" />
                       <h2 class="text-lg font-extrabold"><span class="med_name">Sargel</span></h2>
-                      <div> 
-                        <p class="py-4"><b>Power:</b><span class="med_pow"></span></p>
-                        <p class="py-4"><b>Type:</b><span class="med_type"></span></p>
-                        <p class="py-4"><b>Manufacturer:</b><span class="med_menuf"></span></p>
-                        <p class="py-4"><b>How To Use:</b><span class="med_use"></span></p>
-                        <p class="py-4"><b>Functionality:</b><span class="med_functions"></span></p>
-                        <p class="py-4"><b>Help to prevent:</b><span class="med_effectives"></span></p>
-                        <P></P>
+                      <div class="container_1"> 
                       </div>
                       
                       <div class="modal-action">
@@ -206,12 +191,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="product">
-                <img src="Images/sergel.jpg.png" alt="Sergel">
-                <h3>Sergel</h3>
-                <p class="Info"></p>
-                <button>Info</button>
-            </div> -->
             <div class="card bg-base-100 w-96 shadow-xl">
               <figure class="px-10 pt-10">
                 <img
@@ -224,19 +203,12 @@
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="card-actions">
                   <button href="#my_modal_8" class="btn btn-primary">Buy Now</button>
-                  <a href="#my_modal_8" class="btn">Details</a>
+                  <a href="#my_modal_8" class="btn btn-details" data-med-name="Napa">Details</a>
                   <div class="modal" role="dialog" id="my_modal_8">
                     <div class="modal-box">
                       <img src="Images/napa.jpg.png" alt="Shoes" class="rounded-xl" />
                       <h2 class="text-lg font-extrabold"><span class="med_name">Sargel</span></h2>
-                      <div> 
-                        <p class="py-4"><b>Power:</b><span class="med_pow"></span></p>
-                        <p class="py-4"><b>Type:</b><span class="med_type"></span></p>
-                        <p class="py-4"><b>Manufacturer:</b><span class="med_menuf"></span></p>
-                        <p class="py-4"><b>How To Use:</b><span class="med_use"></span></p>
-                        <p class="py-4"><b>Functionality:</b><span class="med_functions"></span></p>
-                        <p class="py-4"><b>Help to prevent:</b><span class="med_effectives"></span></p>
-                        <P></P>
+                      <div class="container_1"> 
                       </div>
                       
                       <div class="modal-action">
@@ -250,7 +222,7 @@
             <!-- Add more products as needed -->
         </div>
         <div class="justify-center text-center mt-4">
-          <button href="#my_modal_8" class="btn btn-primary ">Show More</button>
+          <button href="#my_modal_8" class="btn btn-primary " id="show-all-container">Show More</button>
         </div>
     </main>
     <footer class="footer footer-center bg-blue-300 p-10">
@@ -301,6 +273,6 @@
           </div>
         </nav>
     </footer>
-    <script src="Med.js"></script>
+    <script src="med1.js"></script>
 </body>
 </html>
